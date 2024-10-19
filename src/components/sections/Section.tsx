@@ -27,8 +27,8 @@ const Main = ({ characters }: { characters: CharactersData }) => {
     return (
         <div className="p-3">
             <ButtonsSections />
-            {/* <SubSection title="Mundo De Los Vivos" section={characters.worldOfTheLiving} />
-            <SubSection title="Hueco Mundo" section={characters.huecoMundo} /> */}
+            <SubSection title="Mundo De Los Vivos" section={characters.worldOfTheLiving} />
+            <SubSection title="Hueco Mundo" section={characters.huecoMundo} />
 
         </div>
     )
