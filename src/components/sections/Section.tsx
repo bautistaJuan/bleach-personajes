@@ -31,10 +31,10 @@ const Main = ({ characters }: { characters: CharactersData }) => {
                 exit={{ opacity: 0, scale: 0.5 }}
                 transition={{ duration: 0.5, ease: "easeInOut" }}
             >
-                <button onClick={() => setIsOpen(false)} className="absolute top-4 text-white right-4 px-3 py-1 rounded-lg font-serif text-[2rem]">
-                    X
-                </button>
                 <div className="bg-black p-6 rounded-lg w-full max-w-[800px] h-full min-h-full relative font-noto text-character">
+                    <button onClick={() => setIsOpen(false)} className="absolute top-4 text-white right-4 px-3 py-1 rounded-lg font-serif text-[2rem]">
+                        X
+                    </button>
                     <img src={charaSelected.fullBodyImage} alt="Nombre1" className="w-full h-auto float-left" />
                     <div className="info">
                         <h2 className="text-2xl text-center mt-4">{charaSelected.name}</h2>
