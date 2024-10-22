@@ -5,12 +5,11 @@ export const data: CharactersData = {
       id: "WOTL-001",
       name: "Ichigo Kurosaki",
       img: "../src/assets/thumb/ichigo.jpg",
-      fullBodyImage: "../src/assets/ichigo.jpg",
+      fullBodyImage: "../src/assets/fullBody/ichigo.png",
       desc: `
       Estudiante de secundaria que puede ver fantasmas. Perdió a su madre de niño a causa de un ataque de Hollows.
       Adquiere poderes de Segador de Almas tras un encuentro con Rukia Kuchiki y se convierte en Segador de Almas Sustituto.
       A través de la confusión que envuelve al Mundo de los Vivos, la Sociedad de Almas y Hueco Mundo, se gana la confianza de los demás Segadores de Almas y hace honor a su posición. Aunque se vio obligado a enfrentarse a su verdadera herencia durante la invasión de Wandenreich, decidió volver a empuñar su espada para proteger a todos.
-      Traducción realizada con la versión gratuita del traductor DeepL.com
       `,
       zanpakuto: "Zangetsu",
       faceImg: "../src/assets/face/ichigo.png",
@@ -92,7 +91,7 @@ export const data: CharactersData = {
       id: "WOTL-008",
       name: "Ryuken Ishida",
       img: "../src/assets/thumb/ryuken.jpg",
-      fullBodyImage: "../src/assets/fullBody/ishida.png",
+      fullBodyImage: "../src/assets/fullBody/ryuken.png",
       desc: `
       El padre de Uryu. Es el director del Hospital General de Karakura. A pesar de ser él mismo un Quincy, desaprueba a los Quincy y a menudo choca con Uryu.
        Hace veinte años estuvo comprometido con Masaki Kurosaki. Pero su compromiso se disolvió tras un incidente en el que el cuerpo de Masaki fue infectado por un Hollow. 
@@ -216,7 +215,7 @@ export const data: CharactersData = {
       id: "SS-007",
       name: "Shinji Hirako",
       img: "../src/assets/thumb/hirako.jpg",
-      fullBodyImage: "../src/assets/fullBody/hirako.png",
+      fullBodyImage: "../src/assets/fullBody/shinji.png",
       desc: `
         Antiguo capitán del Escuadrón 5, fue Hollowfied y relegado al Mundo de los Vivos por una conspiración de Sosuke Aizen. Allí se convirtió en el líder de los Visored, donde mostró un lado compasivo con sus compañeros. Habla en el dialecto de Kansai y se comporta de forma distante. Actualmente ha sido restituido como capitán del Escuadrón 5.
         `,
@@ -505,7 +504,7 @@ export const data: CharactersData = {
       id: "SS-032",
       name: "Chojiro Tadaoki Sasakibe",
       img: "../src/assets/thumb/sasakibe.jpg",
-      fullBodyImage: "../src/assets/fullBody/sasakibe.png",
+      fullBodyImage: "../src/assets/fullBody/chojiro.png",
       desc: `
         Consideraba a Yamamoto como su maestro incluso antes de la fundación de los Trece Escuadrones de la Guardia de la Corte, llegando incluso a adquirir su Bankai, Koko Gonryo Rikyu, sólo para apoyarle. Era un hombre de pocas palabras, pero muy leal. A pesar de poseer una fuerza que se decía rivalizaba con la de un capitán, optó por seguir apoyando al capitán jefe Yamamoto como su lugarteniente y dio su vida luchando contra los Stern Ritters.
         `,
@@ -541,7 +540,7 @@ export const data: CharactersData = {
       id: "RP-002",
       name: "Oh-Etsu Nimaiya",
       img: "../src/assets/thumb/nimaiya.jpg",
-      fullBodyImage: "../src/assets/fullBody/nimaiya.png",
+      fullBodyImage: "../src/assets/fullBody/oh-etsu.png",
       desc: `
        Miembro del Escuadrón Cero que también se hace llamar "Blade God". Parece un rapero.Logró el notable logro de crear el Zanpakuto.
       `,
@@ -574,7 +573,7 @@ export const data: CharactersData = {
       id: "RP-005",
       name: "Tenjiro Kirinji",
       img: "../src/assets/thumb/tenjiro.jpg",
-      fullBodyImage: "../src/assets/fullBody/kirio.png",
+      fullBodyImage: "../src/assets/fullBody/tenjiro.png",
       desc: `
         Miembro del Escuadrón Cero, también conocido por el epíteto "Hot Sping Demon". Lleva el pelo recogido en un extravagante pompadour.
       `,
@@ -703,7 +702,7 @@ export const data: CharactersData = {
       desc: `
         Un Quincy de aspecto robótico cuyo verdadero origen es un misterio. BG9 actúa de manera extremadamente eficiente y calculadora.
       `,
-      faceImg: "../src/assets/face/bg9.jpg",
+      faceImg: "../src/assets/face/bg9.png",
       zanpakuto: "",
     },
     {
@@ -769,7 +768,7 @@ export const data: CharactersData = {
       desc: `
       Stern Ritter. Mientras presume de sus propias habilidades ante Kenpachi Zaraki, es derrotado cuando Zaraki le arranca la garganta.
       `,
-      faceImg: "../src/assets/face/gabrielli.jpg",
+      faceImg: "../src/assets/face/gabrielli.png",
       zanpakuto: "",
     },
     {
@@ -802,7 +801,7 @@ export const data: CharactersData = {
       desc: `
         Stern Ritter. Cuando Masculino fue derrotado, Yhwach invocó el nombre de James para que volviera a su lado.
       `,
-      faceImg: "../src/assets/face/james.jpg",
+      faceImg: "../src/assets/face/james.png",
       zanpakuto: "",
     },
     {
@@ -919,9 +918,9 @@ export const data: CharactersData = {
       id: "HM-002",
       name: "Dordoni Alessandro Del Socaccio",
       img: "../src/assets/thumb/soccacio.jpg",
-      fullBodyImage: "../src/assets/fullBody/soccacio.png",
+      fullBodyImage: "../src/assets/fullBody/dordoni.png",
       desc: "Miembro de la Unidad de Cadáveres de Kurotsuchi. Un Arrancar que una vez fue derrotado en combate por Ichigo en Hueco Mundo.",
-      faceImg: "../src/assets/face/soccacio.png",
+      faceImg: "../src/assets/face/dordoni.png",
     },
     {
       id: "HM-003",

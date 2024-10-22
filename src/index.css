@@ -6,9 +6,29 @@
 
 body {
     @apply bg-primary;
-    @apply font-serif
+    @apply font-serif;
+    background-image: url("./assets/logo-bg/menu_bg.png");
+    background-size: contain;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+@media (width > 1024px) {
+    body {
+        background-size: cover;
+        background-position: top;
+        background-attachment: fixed;
+    }
+
+
 }
 
 .section-li {
-    @apply border border-gray-500 text-[22px] text-center flex items-center justify-center
+    @apply border border-gray-500 text-[22px] text-center flex items-center justify-center max-w-80 h-16
+}
+
+
+.ul-li {
+    @apply flex w-full h-full justify-center items-center
 }
