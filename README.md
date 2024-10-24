@@ -1,4 +1,4 @@
-# Bleach: Thounsand Year Blood War
+# Bleach: Thousand Year Blood War
 
 El proyecto esta disponible para aquellas personas que quieran contribuir o practicar un poco de React 🖤
 
