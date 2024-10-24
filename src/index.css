@@ -4,31 +4,22 @@
 @tailwind components;
 @tailwind utilities;
 
+
+* {
+    @apply scroll-smooth
+}
+
 body {
-    @apply bg-primary;
-    @apply font-serif;
-    background-image: url("./assets/logo-bg/menu_bg.png");
-    background-size: contain;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-position: center;
+    @apply bg-primary font-serif bg-[url("./assets/logo-bg/menu_bg.png")] bg-contain bg-fixed bg-no-repeat bg-center;
 }
 
-@media (width > 1024px) {
-    body {
-        background-size: cover;
-        background-position: top;
-        background-attachment: fixed;
-    }
 
 
-}
-
-.section-li {
+.buttons-sections-li {
     @apply border border-gray-500 text-[22px] text-center flex items-center justify-center max-w-80 h-16
 }
 
 
-.ul-li {
-    @apply flex w-full h-full justify-center items-center
+.buttons-sections-a {
+    @apply flex w-full h-full justify-center items-center;
 }

@@ -15,4 +15,17 @@ interface CharactersData {
   wanderreich: Character[];
   huecoMundo: Character[];
 }
-export type { Character, CharactersData };
+
+interface ModalProps {
+  isOpen: boolean;
+  setIsOpen: (arg0: boolean) => void;
+  charaSelected: Character;
+}
+interface FramerItemsProps {
+  title: string;
+  section: Character[];
+  openModal: (chara: Character) => void;
+  isInView: boolean;
+}
+
+export type { Character, CharactersData, ModalProps, FramerItemsProps };

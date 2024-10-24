@@ -21,10 +21,10 @@ LOS DATOS SE ENCUENTRAN EN ESTE ARCHIVO:
 
 # TODO
 
-- [ ] Ajustar tamaños de las imágenes en el Modal
+- [*] Ajustar tamaños de las imágenes en el Modal
 - [ ] Poder cambiar de personaje con scroll vertical después de seleccionar uno
-- [ ] Al entrar a la página que se carguen solamente una vez.
-- [ ] Cuando el modal esta abierto, no se puede hacer scroll en la página.
+- [*] Al entrar a la página que se carguen solamente una vez.
+- [*] Cuando el modal esta abierto, no se puede hacer scroll en la página.
 
 ## 🛠️ Herramientas Utilizadas
 
