@@ -1,9 +1,10 @@
-import { Character, CharactersData } from "../../types/dataType"
+import { Character, CharactersData } from "../../types/dataType";
 import FramerItems from "./FramerItems";
 import ButtonsSections from "./ButtonsSections";
 import { useInView } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 import Modal from "../Modal/Modal";
+
 const defaultState: Character = {
     id: "string",
     name: "string",
@@ -11,55 +12,62 @@ const defaultState: Character = {
     fullBodyImage: "string",
     desc: "string",
     faceImg: "string",
-    zanpakuto: "string"
+    zanpakuto: "string",
 };
 
 const Section = ({ characters }: { characters: CharactersData }) => {
     // Modal Props
-    const [isOpen, setIsOpen] = useState(Boolean);
+    const [isOpen, setIsOpen] = useState(false);
     const [charaSelected, setCharaSelected] = useState<Character>(defaultState);
-    // FramerItems Props
-    const refWorldOfTheLiving = useRef(null);
-    const refSoulSociety = useRef(null);
-    const refRoyalPalace = useRef(null);
-    const refWanderreich = useRef(null);
-    const refHuecoMundo = useRef(null);
 
-    const isInViewWorld = useInView(refWorldOfTheLiving, { once: true, amount: "some" });
-    const isInViewSoul = useInView(refSoulSociety, { once: true, amount: "some" });
-    const isInViewRoyal = useInView(refRoyalPalace, { once: true, amount: "some" });
-    const isInViewWanderreich = useInView(refWanderreich, { once: true, amount: "some" });
-    const isInViewHueco = useInView(refHuecoMundo, { once: true, amount: "some" });
-    // Handle Modal 
+    // Secciones con referencias y estados
+    const sections = [
+        { title: "Mundo De Los Vivos", key: "worldOfTheLiving", data: characters.worldOfTheLiving },
+        { title: "Sociedad De Almas", key: "soulSociety", data: characters.soulSociety },
+        { title: "Palacio Real", key: "royalPlace", data: characters.royalPlace },
+        { title: "Wandenreich", key: "wanderreich", data: characters.wanderreich },
+        { title: "Hueco Mundo", key: "huecoMundo", data: characters.huecoMundo },
+    ];
+
+    const refs = sections.reduce((acc, section) => {
+        acc[section.key] = useRef(null);
+        return acc;
+    }, {} as Record<string, React.RefObject<HTMLDivElement>>);
+
+    const isInView = sections.reduce((acc, section) => {
+        acc[section.key] = useInView(refs[section.key], { once: true, amount: "some" });
+        return acc;
+    }, {} as Record<string, boolean>);
+
+    // Handle Modal
     const openModal = (chara: Character) => {
         setIsOpen(true);
         setCharaSelected(chara);
-    }
+    };
 
     useEffect(() => {
-        if (isOpen) {
-            document.body.style.overflow = "hidden"
-        } else {
-            document.body.style.overflow = "auto"
-        }
+        document.body.style.overflow = isOpen ? "hidden" : "auto";
         return () => {
-            document.body.style.overflow = "auto"
-        }
-
+            document.body.style.overflow = "auto";
+        };
     }, [isOpen]);
 
     return (
         <>
             <Modal isOpen={isOpen} charaSelected={charaSelected} setIsOpen={setIsOpen} />
             <ButtonsSections />
-            <FramerItems title="Mundo De Los Vivos" section={characters.worldOfTheLiving} openModal={openModal} isInView={isInViewWorld} ref={refWorldOfTheLiving} />
-            <FramerItems title="Sociedad De Almas" section={characters.soulSociety} openModal={openModal} isInView={isInViewSoul} ref={refSoulSociety} />
-            <FramerItems title="Palacio Real" section={characters.royalPlace} openModal={openModal} isInView={isInViewRoyal} ref={refRoyalPalace} />
-            <FramerItems title="Wandenreich" section={characters.wanderreich} openModal={openModal} isInView={isInViewWanderreich} ref={refWanderreich} />
-            <FramerItems title="Hueco Mundo" section={characters.huecoMundo} openModal={openModal} isInView={isInViewHueco} ref={refHuecoMundo} />
-
+            {sections.map((section) => (
+                <FramerItems
+                    key={section.key}
+                    title={section.title}
+                    section={section.data}
+                    openModal={openModal}
+                    isInView={isInView[section.key]}
+                    ref={refs[section.key]}
+                />
+            ))}
         </>
-    )
-}
+    );
+};
 
 export default Section;

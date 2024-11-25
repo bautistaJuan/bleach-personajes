@@ -8,7 +8,7 @@ const Modal = ({ isOpen, setIsOpen, charaSelected }: ModalProps) => {
         <AnimatePresence>
             {isOpen &&
                 <motion.div
-                    className="fixed inset-0 bg-black  z-50  flex justify-center lg:items-center "
+                    className="fixed inset-0 bg-black overflow-y-scroll  z-50  flex justify-center lg:items-center "
                     initial={{ opacity: 0, scale: 0.5 }}
                     animate={{ opacity: 1, scale: 1 }}
                     exit={{ opacity: 0, scale: 0.5 }}
